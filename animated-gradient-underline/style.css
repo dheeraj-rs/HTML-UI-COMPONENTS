@@ -1,0 +1,32 @@
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: poppins, "sans-serif";
+  width: 800px;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  line-height: 3rem;
+  margin-top: 5rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+a.cool-underline {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  background: linear-gradient(90deg, #04b4ff,  #00d8a1);
+  background-size: 0% 4px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: all 0.3s ease-in-out;
+}
+
+a.cool-underline:hover {
+  background-size: 100% 4px;
+}
