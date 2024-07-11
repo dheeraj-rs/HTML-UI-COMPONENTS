@@ -1,0 +1,148 @@
+body {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(83, 27, 4, 0.9766500350140056) 49%, rgba(0, 0, 0, 1) 100%);
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    width: 80%;
+    height: calc(100vh - 10vh);
+    overflow: hidden;
+}
+
+.item {
+    position: absolute;
+    width: 60%;
+    height: 320px;
+    text-align: justify;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+    left: calc(50% - 30%);
+    top: calc(50% - 160px);
+}
+
+/* Buttons */
+#next,
+#prev {
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    font-family: monospace;
+    font-weight: bold;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+#next {
+    right: 10px;
+}
+
+#prev {
+    left: 10px;
+}
+
+#prev:hover,
+#next:hover {
+    opacity: 1;
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .slider {
+        width: 95%;
+        height: calc(100vh - 20vh);
+    }
+
+    .item {
+        width: 90%;
+        height: 250px;
+        left: calc(50% - 49%);
+        padding: 15px;
+    }
+
+    #next,
+    #prev {
+        font-size: 1.5rem;
+        color: #010416;
+    }
+}
+
+/* Extra Small Mobile Styles */
+@media (max-width: 320px) {
+    .slider {
+        width: 100%;
+        height: calc(100vh - 20vh);
+    }
+
+    .item {
+        width: 80%;
+        height: 200px;
+        left: 7%;
+        top: calc(50% - 100px);
+        padding: 10px;
+    }
+
+    #next,
+    #prev {
+        font-size: 1.25rem;
+        color: #010416;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .slider {
+        width: 90%;
+        height: calc(100vh - 15vh);
+    }
+
+    .item {
+        width: 70%;
+        height: 280px;
+        left: calc(50% - 35%);
+        top: calc(50% - 140px);
+        padding: 18px;
+    }
+
+    #next,
+    #prev {
+        font-size: 1.75rem;
+        color: #010416;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+    .slider {
+        width: 80%;
+        height: calc(100vh - 10vh);
+    }
+
+    .item {
+        width: 60%;
+        height: 320px;
+        left: calc(50% - 30%);
+        top: calc(50% - 160px);
+        padding: 20px;
+    }
+
+    #next,
+    #prev {
+        font-size: 2rem;
+    }
+}
