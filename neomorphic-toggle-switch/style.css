@@ -1,0 +1,174 @@
+html,
+body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background-color: #d3d4de;
+  /* Background color of the page */
+}
+
+/* Hide the checkboxes */
+input[type="checkbox"] {
+  display: none;
+}
+
+.box {
+  display: flex;
+  /* Flexbox for horizontal alignment */
+}
+
+.box-center {
+  justify-content: space-around;
+  /* Center items horizontally */
+  align-items: center;
+  /* Center items vertically */
+}
+
+label {
+  cursor: pointer;
+  /* Pointer cursor on hover */
+}
+
+.button {
+  height: 60px;
+  width: 60px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  user-select: none;
+  /* Prevent text selection */
+}
+
+/* Button 1 styling */
+.b1 {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
+    -8px -8px 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Checked state for button 1 */
+.cb:checked+.b1 {
+  box-shadow: inset 8px 8px 10px rgba(0, 0, 0, 0.2),
+    inset -8px -8px 10px rgba(255, 255, 255, 0.6);
+}
+
+/* Button 2 styling */
+.b2 {
+  border-radius: 15px;
+  box-shadow: 12px 12px 26px rgba(0, 0, 0, 0.2),
+    -12px -12px 26px rgba(255, 255, 255, 0.6);
+}
+
+/* Checked state for button 2 */
+.cb:checked+.b2 {
+  box-shadow: inset 12px 12px 16px rgba(0, 0, 0, 0.2),
+    inset -12px -12px 16px rgba(255, 255, 255, 0.6);
+}
+
+/* Button 3 styling */
+.b3 {
+  border-radius: 17px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 16px 16px 30px rgba(0, 0, 0, 0.2),
+    -16px -16px 30px rgba(255, 255, 255, 0.6);
+}
+
+/* Checked state for button 3 */
+.cb:checked+.b3 {
+  box-shadow: inset 16px 16px 30px rgba(0, 0, 0, 0.2),
+    inset -16px -16px 30px rgba(255, 255, 255, 0.6);
+}
+
+/* Hide non-checked icons */
+.cb:checked+label .nc {
+  display: none;
+}
+
+/* Hide checked icons */
+.cb:not(:checked)+label .checked {
+  display: none;
+}
+
+i {
+  font-size: 24px;
+  color: #353857;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transform: all 0.5s ease;
+}
+
+/* Glow effect for checked state of button 1 */
+.cb:checked+.b1.glow i {
+  color: #e3a34f;
+  text-shadow: 0 0 50px rgba(255, 174, 69, 0.9);
+}
+
+/* Glow effect for checked state of button 3 */
+.cb:checked+.b3.glow i {
+  color: #40c99e;
+  text-shadow: 0 0 50px rgba(82, 255, 100, 0.9);
+}
+
+/* Glow effect for checked state of button 2 */
+.cb:checked+.b2.glow i {
+  color: #ff4d61;
+  text-shadow: 0 0 50px rgba(201, 64, 80, 0.9);
+}
+
+/* Remove focus outline */
+:focus {
+  -webkit-tap-highlight-color: transparent;
+  outline: none !important;
+}
+
+/* Toggle switch styling */
+.toggle {
+  border-radius: 100px;
+  width: 65px;
+  max-height: 40px;
+  padding: 10px;
+  box-shadow: inset 5px 5px 6px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 6px rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Move toggle inner element on checked state */
+.cb:checked .toggle>.toggle-inner {
+  transform: translateX(38px);
+  background: #40c99e;
+}
+
+/* Inner element of the toggle switch */
+.toggle-inner {
+  width: 28px;
+  height: 28px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.25);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3),
+    -2px -2px 4px rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease-out;
+}
+
+/* Outer element of the toggle switch */
+.neubtn {
+  width: 100px;
+  height: 40px;
+  padding: 20px 12.5px;
+  border-radius: 100px;
+  transition: box-shadow 2s ease;
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
+    -8px -8px 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Add shadow effect when toggled */
+.neubtn-move {
+  box-shadow: 8px 8px 20px rgba(255, 255, 255, 0.6),
+    -8px -8px 20px rgba(0, 0, 0, 0.2),
+    inset 6px 6px 12px rgba(0, 0, 0, 0.2),
+    inset -6px -6px 12px rgba(255, 255, 255, 0.4);
+}

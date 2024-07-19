@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neumorphic Toggle Switches in Web Design</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Main wrapper for the content -->
+  <div class="wrapper">
+    <!-- Container for the toggle buttons -->
+    <div class="box">
+      <!-- Toggle button 1 -->
+      <input type="checkbox" class="cb" id="cb1">
+      <label for="cb1" class="button b1">
+        <!-- Icons for the toggle button 1 -->
+        <i class="far fa-face-kiss nc"></i>
+        <i class="fas fa-face-kiss-wink-heart checked"></i>
+      </label>
+      <!-- Toggle button 2 -->
+      <input type="checkbox" class="cb" id="cb2">
+      <label for="cb2" class="button b2">
+        <!-- Icons for the toggle button 2 -->
+        <i class="far fa-heart nc"></i>
+        <i class="fas fa-heart checked"></i>
+      </label>
+      <!-- Toggle button 3 -->
+      <input type="checkbox" class="cb" id="cb3">
+      <label for="cb3" class="button b3">
+        <!-- Icons for the toggle button 3 -->
+        <i class="fas fa-unlock nc"></i>
+        <i class="fas fa-lock checked"></i>
+      </label>
+    </div>
+    <!-- Centered toggle switch container -->
+    <div class="box box-center">
+      <div class="neubtn box box-center" id="outer">
+        <!-- Main toggle switch -->
+        <input type="checkbox" class="cb" id="cb4">
+        <label for="cb4" class="toggle" onclick="toggleClasses()">
+          <div class="toggle-inner"></div>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- External JavaScript file -->
+  <script src="script.js"></script>
+</body>
+
+</html>
